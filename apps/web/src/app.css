@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@source "../../../packages/ui/src/**/*.{ts,svelte}";
+
+@theme {
+  --font-sans: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --font-serif: "Fraunces", "Iowan Old Style", serif;
+  --color-background: #f7f5f1;
+  --color-foreground: #1f1e1b;
+  --color-muted: #ece7dd;
+  --color-brand-500: #0f766e;
+  --color-brand-600: #115e59;
+  --color-border: #d6cfbf;
+}
+
+:root {
+  color-scheme: light;
+  color: var(--color-foreground);
+  background: var(--color-background);
+}
+
+:root[data-theme="dark"] {
+  --color-background: #121411;
+  --color-foreground: #f3efe5;
+  --color-muted: #1f241e;
+  --color-brand-500: #2dd4bf;
+  --color-brand-600: #14b8a6;
+  --color-border: #31372f;
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at top left, rgb(15 118 110 / 0.14), transparent 50%),
+    radial-gradient(circle at right 20%, rgb(20 83 45 / 0.08), transparent 45%),
+    var(--color-background);
+}

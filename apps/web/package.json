@@ -1,0 +1,42 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "lint": "oxlint .",
+    "format": "oxfmt . --write",
+    "format:check": "oxfmt . --check",
+    "check-types": "svelte-kit sync && tsgo --noEmit -p ./tsconfig.json && svelte-check --tsconfig ./tsconfig.json",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "start-server-and-test \"vite dev --strictPort --port 4173\" http://localhost:4173 test:e2e:run",
+    "test:e2e:run": "cypress run --config baseUrl=http://localhost:4173"
+  },
+  "dependencies": {
+    "@talequest/content": "workspace:*",
+    "@talequest/ui": "workspace:*",
+    "convex": "^1.28.4",
+    "effect": "^3.18.4",
+    "svelte-clerk": "^0.20.5"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-vercel": "^6.3.2",
+    "@sveltejs/kit": "^2.50.2",
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@tailwindcss/vite": "^4.1.16",
+    "cypress": "^15.5.0",
+    "start-server-and-test": "^2.1.3",
+    "svelte": "^5.51.0",
+    "svelte-check": "^4.3.6",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}

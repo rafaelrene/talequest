@@ -1,0 +1,26 @@
+{
+  "name": "convex",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "convex dev",
+    "build": "node -e \"console.log('apps/convex build not required')\"",
+    "lint": "oxlint convex",
+    "format": "oxfmt convex --write",
+    "format:check": "oxfmt convex --check",
+    "check-types": "tsgo --noEmit -p ./tsconfig.json",
+    "test": "vitest run",
+    "codegen": "convex codegen"
+  },
+  "dependencies": {
+    "@talequest/content": "workspace:*",
+    "convex": "^1.28.4",
+    "effect": "^3.18.4",
+    "luxon": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^24.4.0"
+  }
+}

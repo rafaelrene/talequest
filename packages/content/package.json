@@ -1,0 +1,21 @@
+{
+  "name": "@talequest/content",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "node -e \"console.log('packages/content build not required')\"",
+    "lint": "oxlint .",
+    "format": "oxfmt . --write",
+    "format:check": "oxfmt . --check",
+    "check-types": "tsgo --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tiptap/core": "^3.7.2",
+    "@tiptap/starter-kit": "^3.7.2"
+  }
+}

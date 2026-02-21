@@ -1,0 +1,20 @@
+{
+  "name": "@talequest/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./button": "./src/button.ts"
+  },
+  "scripts": {
+    "build": "node -e \"console.log('packages/ui build pending Step 03')\"",
+    "lint": "oxlint .",
+    "format": "oxfmt . --write",
+    "format:check": "oxfmt . --check",
+    "check-types": "tsgo --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1"
+  }
+}
